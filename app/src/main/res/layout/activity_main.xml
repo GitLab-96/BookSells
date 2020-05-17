@@ -17,7 +17,9 @@
             android:layout_alignParentLeft="true"
             android:background="#FF4081"
             app:itemTextColor="#ffffff"
-           app:itemIconTint="#06F30F"
+            app:itemIconTint="#06F30F"
+            android:clickable="true"
+            android:scrollIndicators="start"
             app:menu="@menu/bottom_menu"
             tools:ignore="RtlHardcoded">
 

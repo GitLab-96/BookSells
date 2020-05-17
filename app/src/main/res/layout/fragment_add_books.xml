@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_margin="10dp"
     tools:context=".AddBooksFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="3"
-
-        android:layout_margin="5dp"
+        android:weightSum="4"
+        android:gravity="center"
+        android:background="#DAC3DF"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <TextView
@@ -21,20 +23,21 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Current Date" />
+            android:text="Current Date"
+            android:id="@+id/currentDate"/>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_weight="1">
+            android:layout_weight="2">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Version Type" />
+                android:text="Version Type :" />
 
             <Spinner
                 android:layout_width="wrap_content"
@@ -50,7 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Current Time" />
+            android:text="Current Time"
+            android:id="@+id/currentTime"/>
 
 
 
@@ -59,9 +63,10 @@
 
     <ImageView
         android:layout_width="250dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/bookadd"
         android:id="@+id/frontImage"/>
 
     <LinearLayout
@@ -74,22 +79,25 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
+            android:src="@drawable/newbooks"
             android:layout_gravity="center_horizontal"
             android:id="@+id/leftAngle"/>
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
+            android:src="@drawable/oldbooks"
             android:layout_gravity="center_horizontal"
             android:id="@+id/cornerImage"/>
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
+            android:src="@drawable/newbooks"
             android:layout_gravity="center_horizontal"
             android:id="@+id/rightAngleImage"/>
     </LinearLayout>
@@ -118,10 +126,94 @@
             android:layout_height="36dp"
             android:hint="Writer Name"
             android:inputType="text"
-            android:id="@+id/addwritterr"
+            android:id="@+id/addwriter"
             android:textAlignment="center" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:hint="Publication Name"
+            android:inputType="text"
+            android:id="@+id/publicationName"
+            android:textAlignment="center" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Level"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/levelSpenner"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Class"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/classSpenner"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:hint="Price (Tk)"
+            android:inputType="number"
+            android:id="@+id/sellPrice"
+            android:textAlignment="center" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Sell"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:id="@+id/sellButtn"/>
 
 
 </LinearLayout>

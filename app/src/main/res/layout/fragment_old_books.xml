@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#9C27B0"
     tools:context=".OldBooksFragment">
 
-    <TextView
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/old_main_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorHeight="4dp"
+                android:background="#D272E2"
+                app:tabIndicatorColor="#F00707"
+                app:tabTextColor="#5E05F3"
+                app:tabSelectedTextColor="#05F5DC"
+                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+            </com.google.android.material.tabs.TabLayout>
+
+        </HorizontalScrollView>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Old Book" />
+        android:id="@+id/old_main_tab_Pager">
 
-</LinearLayout>
+    </androidx.viewpager.widget.ViewPager>
+
+
+</RelativeLayout>
