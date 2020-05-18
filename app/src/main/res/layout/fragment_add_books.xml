@@ -8,6 +8,20 @@
     android:orientation="vertical"
     android:layout_margin="10dp"
     tools:context=".AddBooksFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -111,7 +125,7 @@
             android:layout_height="36dp"
             android:hint="Book Name"
             android:inputType="text"
-            android:id="@+id/addBooks"
+            android:id="@+id/bookName"
             android:textAlignment="center" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -190,6 +204,21 @@
 
     </LinearLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:hint="Pik Address"
+                    android:inputType="number"
+                    android:id="@+id/picAdress"
+                    android:textAlignment="center" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -211,9 +240,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Sell"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
         android:textAllCaps="false"
         android:id="@+id/sellButtn"/>
 
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
