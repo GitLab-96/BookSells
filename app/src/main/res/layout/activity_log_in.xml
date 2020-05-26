@@ -44,7 +44,7 @@
                 android:inputType="phone"
                 android:textColor="#BEB7B7"
                 android:textColorHint="#FFFFFF"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
 
         </com.google.android.material.textfield.TextInputLayout>

@@ -26,6 +26,13 @@ public class LogInActivity extends AppCompatActivity {
                 startActivity(new Intent(LogInActivity.this,MainActivity.class));
             }
         });
+
+        registerHereTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LogInActivity.this,RegisterActivity.class));
+            }
+        });
     }
 
     private void init() {
